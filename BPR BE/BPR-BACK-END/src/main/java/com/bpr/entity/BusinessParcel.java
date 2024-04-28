@@ -4,19 +4,17 @@ import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
-
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-public class BNPL {
-	
+@AllArgsConstructor
+@NoArgsConstructor
+public class BusinessParcel {
 	private int slno;
 	@Id
 	private int cid;
@@ -52,6 +50,4 @@ public class BNPL {
 	private Date date;
 	
 
-	
-	
 }

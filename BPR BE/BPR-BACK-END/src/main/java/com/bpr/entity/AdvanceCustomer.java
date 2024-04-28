@@ -4,19 +4,18 @@ import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
-
-@Data
 @Entity
-public class BNPL {
-	
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class AdvanceCustomer {
+
 	private int slno;
 	@Id
 	private int cid;
@@ -48,10 +47,5 @@ public class BNPL {
 	@Min(value = 0)
 	@Column(nullable = false)
 	private double grossAmt;
-	
 	private Date date;
-	
-
-	
-	
 }
